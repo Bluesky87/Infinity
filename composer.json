@@ -1,0 +1,16 @@
+{
+  "name": "Bluesky87/Infinity",
+  "description": "Blue",
+  "keywords": ["Bluesky", "sandbox"],
+  "license": "MIT",
+  "type": "project",
+
+  "require": {
+    "php": ">=5.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~5.7",
+    "friendsofphp/php-cs-fixer": "^2.1"
+  }
+
+}
