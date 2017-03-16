@@ -5,6 +5,7 @@ return PhpCsFixer\Config::create()
     ->setRules(array(
         '@PSR2' => true,
         'full_opening_tag' => true,
+        'method_separation' => true,
     ))
     ->setFinder(PhpCsFixer\Finder::create()
                     ->in(__DIR__));
@@ -22,4 +23,6 @@ return PhpCsFixer\Config::create()
 
 
 php-cs-fixer fix . --level=psr2 --dry-run
+
+https://github.com/FriendsOfPHP/PHP-CS-Fixer    rules
 */

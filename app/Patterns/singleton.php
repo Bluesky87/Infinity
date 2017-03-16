@@ -6,6 +6,8 @@
  * Time: 21:43
  */
 
+namespace Infinity\Patterns;
+
 class Singleton
 {
     private $settings = ['user' => 'Blue',
@@ -31,7 +33,3 @@ class Singleton
         return $this->settings[$key];
     }
 }
-
-
-
-var_dump(Singleton::getInstance(), Singleton::getInstance(), Singleton::getInstance());
