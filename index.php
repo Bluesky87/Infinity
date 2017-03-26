@@ -6,8 +6,4 @@
  * Time: 21:04
  */
 
-require("vendor/autoload.php");
-
-use Infinity\Patterns\Singleton;
-
-var_dump(Singleton::getInstance());
+echo ':)';
