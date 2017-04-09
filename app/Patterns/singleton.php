@@ -2,16 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: Grzegorz Kasperek
- * Date: 02.03.2017
- * Time: 21:43
  */
 
 namespace Infinity\Patterns;
 
 class Singleton
 {
-    private $settings = ['user' => 'Blue',
-        'pass' => 'password'];
+    private $settings = ['nick' => 'Blue',
+        'lvl' => '29'];
 
     private static $instance;
 
@@ -23,7 +21,6 @@ class Singleton
     {
         if (empty(self::$instance)) {
             self::$instance = new Singleton();
-            var_dump('generate instance');
         }
         return self::$instance;
     }

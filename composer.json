@@ -1,20 +1,32 @@
 {
   "name": "Bluesky87/Infinity",
   "description": "Blue",
-  "keywords": ["Bluesky", "sandbox"],
+  "keywords": [
+    "Bluesky",
+    "sandbox"
+  ],
   "license": "MIT",
   "type": "library",
-
   "require": {
-    "php": ">=5.6"
+    "php": ">=5.6",
+    "components/jquery": "^3.2"
   },
   "require-dev": {
-    "phpunit/phpunit": "~5.7",
-    "friendsofphp/php-cs-fixer": "^2.1"
+    "phpunit/phpunit": "5.0",
+    "friendsofphp/php-cs-fixer": "^2.1",
+    "phpunit/dbunit": "^2.0",
+    "mockery/mockery": "~0.9",
+    "sebastian/environment": "~1.3",
+    "ajbdev/authorizenet-php-api": "*"
   },
   "autoload": {
     "psr-4": {
       "Infinity\\": "app"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Infinity\\test\\": "Test"
     }
   }
 }
