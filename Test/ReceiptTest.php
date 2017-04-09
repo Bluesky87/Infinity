@@ -10,7 +10,9 @@ require dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'vendor' .DIRECTORY_S
 //require __DIR__ . '/../vendor/autoload.php';
 use Infinity\Tests\Receipt;
 
-class ReceiptTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class ReceiptTest extends TestCase
 {
     public function setUp()
     {
@@ -22,16 +24,29 @@ class ReceiptTest extends \PHPUnit_Framework_TestCase
         unset($this->Receipt);
     }
 
-    public function testTotal()
+    /**
+     * @dataProvider provideTotal
+     */
+    public function testTotal($items, $expected)
     {
-        $input = [0, 2, 5, 8];
+        //$input = [0, 2, 5, 8];
         $coupon = null;
-        $output = $this->Receipt->total($input, $coupon);
+        $output = $this->Receipt->total($items, $coupon);
         $this->assertEquals(
-           15,
+          // 15,
+            $expected,
            $output,
-           'When summing the total should equal 15'
+           "When summing the total should equal {$expected}"
        );
+    }
+
+    public function provideTotal()
+    {
+        return [
+           'ints totaling 16' => [[1, 2, 5, 8], 16],
+            [[-1, 2, 5, 8], 14],
+            [[1, 2, 8], 11],
+        ];
     }
 
     public function testTotalAndCoupon()
@@ -44,6 +59,16 @@ class ReceiptTest extends \PHPUnit_Framework_TestCase
             $output,
             'When summing the total should equal 12'
         );
+    }
+
+    public function testTotalException()
+    {
+        $input = [0, 2, 5, 8];
+        $coupon = 1.20;
+        //$this->expectE
+        $this->expectException('BadMethodCallException');
+        $this->Receipt->total($input, $coupon);
+
     }
 
     public function testPostTaxTotal()
@@ -74,7 +99,7 @@ class ReceiptTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(
             1.00,
             $output,
-            'The tax calculation shuld equal 1.00'
+            'The tax calculation should equal 1.00'
         );
     }
 }
