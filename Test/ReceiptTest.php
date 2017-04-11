@@ -16,7 +16,14 @@ class ReceiptTest extends TestCase
 {
     public function setUp()
     {
-        $this->Receipt = new Receipt();
+        $this->Formatter = $this->getMockBuilder('Infinity\Tests\Formatter')
+            ->setMethods(['currencyAmt'])
+            ->getMock();
+        $this->Formatter->expects($this->any())
+            ->method('currencyAmt')
+            ->with($this->anything())
+            ->will($this->returnArgument(0));
+        $this->Receipt = new Receipt($this->Formatter);
     }
 
     public function tearDown()
@@ -68,7 +75,6 @@ class ReceiptTest extends TestCase
         //$this->expectE
         $this->expectException('BadMethodCallException');
         $this->Receipt->total($input, $coupon);
-
     }
 
     public function testPostTaxTotal()
@@ -78,6 +84,7 @@ class ReceiptTest extends TestCase
         $coupon = null;
         $Receipt = $this->getMockBuilder('Infinity\Tests\Receipt')
             ->setMethods(['tax', 'total'])
+            ->setConstructorArgs([$this->Formatter])
             ->getMock();
         $Receipt->expects($this->once())
             ->method('total')
