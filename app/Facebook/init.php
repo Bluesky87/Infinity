@@ -8,6 +8,7 @@ session_start();
 
 require_once("../../../vendor/autoload.php");
 
+//secret nie dziala reset
 Facebook\FacebookSession::setDefaultApplication('622195087925788', '411c918305d238d8c9cc4b4af1ac2574');
 
 $facebook = new Facebook\FacebookRedirectLoginHelper('http://localhost/infinity/view/templates/facebook/signin.php');
