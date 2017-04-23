@@ -37,4 +37,11 @@ class StrategyTest extends TestCase
         $result = $this->paymentType->getType()->paymentMethod();
         $this->assertEquals('You choose Cash', $result);
     }
+
+    public function testInterface()
+    {
+        $class = new \ReflectionClass(PaymentCash::class);
+        $result = $class->implementsInterface('Infinity\Patterns\Strategy\PaymentType');
+        $this->assertTrue($result);
+    }
 }
