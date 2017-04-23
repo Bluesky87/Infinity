@@ -6,9 +6,9 @@
  * Time: 18:34
  */
 
-namespace Infinity\Test;
+namespace Infinity\Tests;
 
-use Infinity\Tests\User;
+use Infinity\Others\User;
 
 class UserTest extends \PHPUnit_Framework_TestCase
 {

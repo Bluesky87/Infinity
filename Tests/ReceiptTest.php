@@ -4,11 +4,11 @@
  * User: Grzegorz Kasperek
  */
 
-namespace Infinity\Test;
+namespace Infinity\Tests;
 
 require dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'vendor' .DIRECTORY_SEPARATOR . 'autoload.php';
 //require __DIR__ . '/../vendor/autoload.php';
-use Infinity\Tests\Receipt;
+use Infinity\Others\Receipt;
 
 use PHPUnit\Framework\TestCase;
 
@@ -82,7 +82,7 @@ class ReceiptTest extends TestCase
         $items = [1, 2, 5, 8];
         $tax = 0.20;
         $coupon = null;
-        $Receipt = $this->getMockBuilder('Infinity\Tests\Receipt')
+        $Receipt = $this->getMockBuilder('Infinity\Others\Receipt')
             ->setMethods(['tax', 'total'])
             ->setConstructorArgs([$this->Formatter])
             ->getMock();

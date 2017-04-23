@@ -4,7 +4,7 @@
  * User: Grzegorz Kasperek
  */
 
-namespace Infinity\Tests;
+namespace Infinity\Others;
 
 class User
 {

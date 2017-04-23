@@ -4,10 +4,10 @@
  * User: Grzegorz Kasperek
  */
 
-namespace Infinity\Test;
+namespace Infinity\Tests;
 
 require __DIR__ . '/../vendor/autoload.php';
-use Infinity\Tests\Payment;
+use Infinity\Others\Payment;
 
 class PaymentTest extends \PHPUnit_Framework_TestCase
 {

@@ -6,7 +6,7 @@
  * Time: 20:24
  */
 
-namespace Infinity\Tests;
+namespace Infinity\Others;
 
 class Payment
 {

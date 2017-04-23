@@ -4,11 +4,11 @@
  * User: Grzegorz Kasperek
  */
 
-namespace Infinity\Test;
+namespace Infinity\Tests;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Infinity\Tests\URL;
+use Infinity\Others\URL;
 
 class URLTest extends \PHPUnit_Framework_TestCase
 {

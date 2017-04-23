@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Grzegorz Kasperek
  */
-namespace Infinity\Test;
+namespace Infinity\Tests;
 
 require __DIR__ . '/../vendor/autoload.php';
 use Infinity\Patterns\Singleton;

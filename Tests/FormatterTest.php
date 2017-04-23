@@ -4,11 +4,11 @@
  * User: Grzegorz Kasperek
  */
 
-namespace Infinity\Test;
+namespace Infinity\Tests;
 
 require dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'vendor' .DIRECTORY_SEPARATOR . 'autoload.php';
 use PHPUnit\Framework\TestCase;
-use Infinity\Tests\Formatter;
+use Infinity\Others\Formatter;
 
 class FormatterTest extends TestCase
 {
