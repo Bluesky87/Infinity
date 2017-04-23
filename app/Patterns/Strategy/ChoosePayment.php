@@ -8,8 +8,17 @@
 
 namespace Infinity\Patterns\Strategy;
 
-
 class ChoosePayment
 {
+    private $paymentType;
 
+    public function create(PaymentType $paymentType)
+    {
+        $this->paymentType = $paymentType;
+        return $this->paymentType;
+    }
+
+    /*public function getType(){
+        return $this->paymentType;
+    }*/
 }

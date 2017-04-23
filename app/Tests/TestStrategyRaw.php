@@ -2,6 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: Grzegorz Kasperek
- * Date: 23.04.2017
- * Time: 18:07
  */
+require("../../vendor/autoload.php");
+
+use Infinity\Patterns\Strategy\ChoosePayment;
+use Infinity\Patterns\Strategy\PaymentCash;
+
+$paymentType = new ChoosePayment();
+
+$paymentClass = $paymentType->create(new PaymentCash());
+
+echo $paymentClass->paymentMethod();

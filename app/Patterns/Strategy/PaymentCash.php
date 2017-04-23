@@ -8,8 +8,10 @@
 
 namespace Infinity\Patterns\Strategy;
 
-
-class PaymentCash
+class PaymentCash implements PaymentType
 {
-
+    public function paymentMethod()
+    {
+        return 'You choose Cash';
+    }
 }

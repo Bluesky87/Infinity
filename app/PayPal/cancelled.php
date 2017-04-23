@@ -6,6 +6,6 @@
     <title>Paypal errror</title>
 </head>
 <body>
-<p>WRONG</p>
+<p>cancelled</p>
 </body>
 </html>
