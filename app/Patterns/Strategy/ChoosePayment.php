@@ -12,13 +12,13 @@ class ChoosePayment
 {
     private $paymentType;
 
-    public function create(PaymentType $paymentType)
+    public function setType(PaymentType $paymentType)
     {
         $this->paymentType = $paymentType;
-        return $this->paymentType;
     }
 
-    /*public function getType(){
+    public function getType()
+    {
         return $this->paymentType;
-    }*/
+    }
 }

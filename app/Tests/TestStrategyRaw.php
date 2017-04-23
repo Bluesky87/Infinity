@@ -10,6 +10,6 @@ use Infinity\Patterns\Strategy\PaymentCash;
 
 $paymentType = new ChoosePayment();
 
-$paymentClass = $paymentType->create(new PaymentCash());
+$paymentType->setType(new PaymentCash());
 
-echo $paymentClass->paymentMethod();
+echo $paymentType->getType()->paymentMethod();
