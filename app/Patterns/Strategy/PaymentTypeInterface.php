@@ -6,7 +6,7 @@
 
 namespace Infinity\Patterns\Strategy;
 
-interface PaymentType
+interface PaymentTypeInterface
 {
     public function paymentMethod();
 }

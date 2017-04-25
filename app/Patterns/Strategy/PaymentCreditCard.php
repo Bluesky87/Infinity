@@ -8,7 +8,7 @@
 
 namespace Infinity\Patterns\Strategy;
 
-class PaymentCreditCard implements PaymentType
+class PaymentCreditCard implements PaymentTypeInterface
 {
     public function paymentMethod()
     {

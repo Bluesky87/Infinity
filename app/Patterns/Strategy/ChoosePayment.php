@@ -12,7 +12,7 @@ class ChoosePayment
 {
     private $paymentType;
 
-    public function setType(PaymentType $paymentType)
+    public function setType(PaymentTypeInterface $paymentType)
     {
         $this->paymentType = $paymentType;
     }

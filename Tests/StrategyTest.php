@@ -41,7 +41,7 @@ class StrategyTest extends TestCase
     public function testInterface()
     {
         $class = new \ReflectionClass(PaymentCash::class);
-        $result = $class->implementsInterface('Infinity\Patterns\Strategy\PaymentType');
+        $result = $class->implementsInterface('Infinity\Patterns\Strategy\PaymentTypeInterface');
         $this->assertTrue($result);
     }
 }
