@@ -8,7 +8,6 @@
 
 namespace Infinity\Patterns\Adapter;
 
-
 class EmailAdapter implements MessageInterface
 {
     protected $email;

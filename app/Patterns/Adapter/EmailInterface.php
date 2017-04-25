@@ -8,7 +8,6 @@
 
 namespace Infinity\Patterns\Adapter;
 
-
 interface EmailInterface
 {
     public function sendMail();

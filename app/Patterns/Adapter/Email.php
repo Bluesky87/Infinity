@@ -8,12 +8,10 @@
 
 namespace Infinity\Patterns\Adapter;
 
-
 class Email implements EmailInterface
 {
     public function sendMail()
     {
         return 2;
     }
-
 }

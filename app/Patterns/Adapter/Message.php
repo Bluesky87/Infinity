@@ -8,7 +8,6 @@
 
 namespace Infinity\Patterns\Adapter;
 
-
 class Message implements MessageInterface
 {
     public function send()

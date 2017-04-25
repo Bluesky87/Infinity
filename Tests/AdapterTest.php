@@ -13,17 +13,18 @@ use Infinity\Patterns\Adapter\Email;
 use Infinity\Patterns\Adapter\Message;
 use Infinity\Patterns\Adapter\EmailAdapter;
 
-
 class AdapterTest extends TestCase
 {
-    public function testMessage() {
+    public function testMessage()
+    {
         $message = new Message();
         $result = $message->send();
 
         $this->assertEquals(1, $result);
     }
 
-    public function testEmail(){
+    public function testEmail()
+    {
         $email = new Email();
         $emailAdapter = new EmailAdapter($email);
         $result = $emailAdapter->send();
