@@ -19,7 +19,7 @@ final class RentTv implements RentInterface
 
     public function price()
     {
-        echo 'You add TV';
+        //echo 'You add TV';
         return $this->rent->price() + 20;
     }
 }

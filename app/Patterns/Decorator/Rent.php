@@ -12,7 +12,7 @@ final class Rent implements RentInterface
 {
     public function price()
     {
-        echo 'You rent a flat';
+        //echo 'You rent a flat';
         return 100;
     }
 }

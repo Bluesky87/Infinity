@@ -20,7 +20,7 @@ class RentFridge implements RentInterface
 
     public function price()
     {
-        echo 'You add Fridge';
+        //echo 'You add Fridge';
         return $this->rent->price() + 35;
     }
 }
