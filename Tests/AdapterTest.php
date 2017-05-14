@@ -14,7 +14,6 @@ use Infinity\Patterns\Adapter\NewProductAdapter;
 
 class AdapterTest extends TestCase
 {
-
     public function testPriceInNewProduct()
     {
         $product = new NewProduct();

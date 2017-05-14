@@ -8,7 +8,6 @@
 
 namespace Infinity\Patterns\Adapter;
 
-
 class NewProductAdapter implements ProductInterface
 {
     private $adapter;
@@ -22,10 +21,12 @@ class NewProductAdapter implements ProductInterface
     {
         return $this->adapter->price();
     }
+
     public function getName()
     {
         return $this->adapter->name();
     }
+
     public function getSize()
     {
         return $this->adapter->size();

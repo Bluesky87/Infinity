@@ -8,7 +8,6 @@
 
 namespace Infinity\Patterns\Decorator;
 
-
 class RentFridge implements RentInterface
 {
     private $rent;

@@ -8,17 +8,18 @@
 
 namespace Infinity\Patterns\Adapter;
 
-
 class NewProduct implements NewProductInterface
 {
     public function price()
     {
         return 1.23;
     }
+
     public function name()
     {
         return 'PC';
     }
+
     public function size()
     {
         return '200x100';

@@ -8,10 +8,11 @@
 
 namespace Infinity\Patterns\Adapter;
 
-
 interface NewProductInterface
 {
     public function name();
+
     public function price();
+
     public function size();
 }

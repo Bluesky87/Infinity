@@ -11,6 +11,8 @@ namespace Infinity\Patterns\Adapter;
 interface ProductInterface
 {
     public function getName();
+
     public function getPrice();
+
     public function getSize();
 }
