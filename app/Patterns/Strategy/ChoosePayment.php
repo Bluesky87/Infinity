@@ -17,8 +17,8 @@ class ChoosePayment
         $this->paymentType = $paymentType;
     }
 
-    public function getType()
+    public function getPaymentMethod()
     {
-        return $this->paymentType;
+        return $this->paymentType->paymentMethod();
     }
 }

@@ -27,14 +27,14 @@ class StrategyTest extends TestCase
     public function testCreditCardType()
     {
         $this->paymentType->setType(new PaymentCreditCard());
-        $result = $this->paymentType->getType()->paymentMethod();
+        $result = $this->paymentType->getPaymentMethod();
         $this->assertEquals('You choose Credit Card', $result);
     }
 
     public function testPaymentCashType()
     {
         $this->paymentType->setType(new PaymentCash());
-        $result = $this->paymentType->getType()->paymentMethod();
+        $result = $this->paymentType->getPaymentMethod();
         $this->assertEquals('You choose Cash', $result);
     }
 

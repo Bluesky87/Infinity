@@ -9,27 +9,27 @@
 namespace Infinity\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Infinity\Patterns\Adapter\Email;
-use Infinity\Patterns\Adapter\Message;
-use Infinity\Patterns\Adapter\EmailAdapter;
+use Infinity\Patterns\Adapter\NewProduct;
+use Infinity\Patterns\Adapter\NewProductAdapter;
 
 class AdapterTest extends TestCase
 {
-    public function testMessage()
-    {
-        $message = new Message();
-        $result = $message->send();
 
-        $this->assertEquals(1, $result);
+    public function testPriceInNewProduct()
+    {
+        $product = new NewProduct();
+        $name = $product->name();
+
+        $this->assertEquals('PC', $name);
     }
 
-    public function testEmail()
+    public function testPriceInNewProductAdapter()
     {
-        $email = new Email();
-        $emailAdapter = new EmailAdapter($email);
-        $result = $emailAdapter->send();
+        $product = new NewProduct();
+        $productAdapter = new NewProductAdapter($product);
 
+        $productAdapterName = $productAdapter->getName();
 
-        $this->assertEquals(2, $result);
+        $this->assertEquals('PC', $productAdapterName);
     }
 }
