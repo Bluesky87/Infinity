@@ -6,14 +6,14 @@ namespace Infinity\Patterns\Observer;
  * Created by PhpStorm.
  * User: Grzegorz Kasperek
  */
-class Observer1 implements \SplObserver
+class Observer2 implements \SplObserver
 {
     private $addUsers = [];
 
     public function update(\SplSubject $subject)
     {
         $this->addUsers[] = clone $subject;
-       // echo 'Wysłałem maila z informacją o zapisaniu się do newsletter.';
+        // echo 'Wysyłam smsa';
     }
 
     /**

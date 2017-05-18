@@ -30,7 +30,7 @@ class Newsletter implements \SplSubject
 
     public function register($data)
     {
-        echo 'Rejestruje wysłanie maila i zmieniam status na wysłany.';
+        //echo 'Rejestruje wysłanie maila i zmieniam status na wysłany.';
         $this->notify();
     }
 }

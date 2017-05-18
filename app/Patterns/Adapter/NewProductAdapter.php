@@ -12,6 +12,10 @@ class NewProductAdapter implements ProductInterface
 {
     private $adapter;
 
+    /**
+     * NewProductAdapter constructor.
+     * @param NewProduct $product
+     */
     public function __construct(NewProduct $product)
     {
         $this->adapter = $product;
