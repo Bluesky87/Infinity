@@ -20,6 +20,8 @@ $test2->name = 'Joanna';
 
 $tests = new \Infinity\Others\Collection([$test1, $test2]);
 
+echo count($tests);
+
 
 foreach($tests as $item) {
     echo $item->name;

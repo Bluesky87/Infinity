@@ -10,10 +10,11 @@ namespace Infinity\Others;
 
 
 use ArrayIterator;
+use Countable;
 use IteratorAggregate;
 use Traversable;
 
-class Collection implements IteratorAggregate
+class Collection implements Countable, IteratorAggregate
 {
 
     protected $items;
@@ -33,5 +34,19 @@ class Collection implements IteratorAggregate
     public function getIterator()
     {
         return new ArrayIterator($this->items);
+    }
+
+    /**
+     * Count elements of an object
+     * @link http://php.net/manual/en/countable.count.php
+     * @return int The custom count as an integer.
+     * </p>
+     * <p>
+     * The return value is cast to an integer.
+     * @since 5.1.0
+     */
+    public function count()
+    {
+       return count($this->items);
     }
 }
