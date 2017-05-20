@@ -4,10 +4,12 @@
  * User: Grzegorz Kasperek
  */
 
+require_once ('../../vendor/autoload.php');
+
 try {
     $inputFileType = PHPExcel_IOFactory::identify('test.xls');
     $objReader = PHPExcel_IOFactory::createReader($inputFileType);
-    $excel = $objReader->load('file url');
+    $excel = $objReader->load('test.xls');
 } catch(Exception $e) {
     die($e->getMessage());
 }
