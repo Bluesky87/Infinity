@@ -16,3 +16,4 @@ $addFridge = new RentFridge(new RentTv($rent));
 //echo ($addTv->price());
 
 echo($addFridge->price());
+
