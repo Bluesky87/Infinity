@@ -22,3 +22,4 @@ if (($handle = fopen("../../storage/test.csv", "r")) !== FALSE) {
     fclose($handle);
 }
 
+echo mb_detect_encoding($handle);
