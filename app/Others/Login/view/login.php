@@ -2,8 +2,9 @@
 
     session_start();
 
-if(isset($_SESSION['log']) && $_SESSION['log'] == true) {
-    header("Location: user.php");exit;
+if (isset($_SESSION['log']) && $_SESSION['log'] == true) {
+    header("Location: user.php");
+    exit;
 }
 ?>
 
@@ -32,7 +33,7 @@ if(isset($_SESSION['log']) && $_SESSION['log'] == true) {
         </form>
 
         <?php
-            if(isset($_SESSION['blad'])) {
+            if (isset($_SESSION['blad'])) {
                 echo $_SESSION['blad'];
             }
         ?>

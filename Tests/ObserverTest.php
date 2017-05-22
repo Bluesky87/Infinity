@@ -27,5 +27,4 @@ class ObserverTest extends TestCase
         $this->assertCount(2, $observer->getAddUsers());
         $this->assertCount(2, $observer2->getAddUsers());
     }
-
 }

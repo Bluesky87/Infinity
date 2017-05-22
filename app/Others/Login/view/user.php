@@ -4,11 +4,11 @@
  */
 require("../../../../vendor/autoload.php");
 use Infinity\Others\Login\Db;
+
 // very raw code:)
 session_start();
 
-if(isset($_POST['mail'])) {
-
+if (isset($_POST['mail'])) {
     $mail = strip_tags($_POST['mail']);
     $password = strip_tags($_POST['password']);
 
@@ -28,19 +28,17 @@ if(isset($_POST['mail'])) {
         $_SESSION['log'] = true;
         echo $_SESSION['user'];
         unset($_SESSION['blad']);
-    }
-    else {
+    } else {
         $_SESSION['blad'] = '<span style="color:red">Bład</span>';
-        header("Location: login.php");exit;
+        header("Location: login.php");
+        exit;
     }
-}
-else {
-    if($_SESSION['log'] == true) {
+} else {
+    if ($_SESSION['log'] == true) {
         echo $_SESSION['user'];
         unset($_SESSION['blad']);
+    } else {
+        header("Location: login.php");
+        exit;
     }
-    else {
-        header("Location: login.php");exit;
-    }
-
 }

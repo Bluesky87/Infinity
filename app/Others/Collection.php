@@ -8,7 +8,6 @@
 
 namespace Infinity\Others;
 
-
 use ArrayIterator;
 use Countable;
 use IteratorAggregate;
@@ -16,10 +15,9 @@ use Traversable;
 
 class Collection implements Countable, IteratorAggregate
 {
-
     protected $items;
 
-    function __construct(array $items)
+    public function __construct(array $items)
     {
         $this->items = $items;
     }
@@ -47,6 +45,6 @@ class Collection implements Countable, IteratorAggregate
      */
     public function count()
     {
-       return count($this->items);
+        return count($this->items);
     }
 }

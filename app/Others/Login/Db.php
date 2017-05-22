@@ -9,21 +9,19 @@
 
 namespace Infinity\Others\Login;
 
-
 use Exception;
 use PDO;
 
 class Db
 {
-    public function connect() {
+    public function connect()
+    {
         $dsn = 'mysql:host=localhost;dbname=pdo';
-        try{
+        try {
             $db = new PDO($dsn, 'Grzegorz2', '123456');
             return $db;
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             return $e->getMessage();
         }
-
     }
 }

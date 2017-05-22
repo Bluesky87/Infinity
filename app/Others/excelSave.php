@@ -4,7 +4,7 @@
  * User: Grzegorz Kasperek
  */
 
-require_once ('../../vendor/autoload.php');
+require_once('../../vendor/autoload.php');
 
 
 $excel = new PHPExcel();
@@ -25,11 +25,11 @@ header('Content-Type: application/vnd.ms-excel');
 header('Content-Disposition: attachment;filename="'.$filename.'"');
 header('Cache-Control: max-age=0');
 header('Cache-Control: max-age=1');
-header ('Expires: Mon, 01 Jan 2000 00:00:00 GMT');
-header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
-header ('Cache-Control: cache, must-revalidate');
-header ('Pragma: public');
+header('Expires: Mon, 01 Jan 2000 00:00:00 GMT');
+header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
+header('Cache-Control: cache, must-revalidate');
+header('Pragma: public');
 $writer = PHPExcel_IOFactory::createWriter($excel, 'Excel5');
-$writer->setPreCalculateFormulas(FALSE);
+$writer->setPreCalculateFormulas(false);
 $writer->save('php://output');
 exit;
