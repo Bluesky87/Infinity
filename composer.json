@@ -12,7 +12,8 @@
     "components/jquery": "^3.2",
     "facebook/php-sdk-v4": "4.0.*",
     "guzzlehttp/guzzle": "^6.2",
-    "phpoffice/phpexcel": "^1.8"
+    "phpoffice/phpexcel": "^1.8",
+    "fergusean/nusoap": "^0.9.5"
   },
   "require-dev": {
     "phpunit/phpunit": "5.5.*",
