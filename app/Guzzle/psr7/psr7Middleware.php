@@ -39,7 +39,7 @@ $stack->setHandler(\GuzzleHttp\choose_handler());
 
 $stack->push(Middleware::mapRequest(function (RequestInterface $request) {
     return $request->withHeader('X-Custom-Header-Request', 'Modified Headers Using Middleware');
-}), 'add_custom_header_request');
+}), 'add_custom_header_request'); // secound param name of middleware
 
 $stack->push(Middleware::mapResponse(function (ResponseInterface $response) {
     return $response->withHeader('X-Custom-Header-Response', 'Modified Headers Using Middleware');
@@ -72,9 +72,10 @@ echo "</br>";
 
 echo "remove CONVERT from stack </br>";
 
-//check again
 
-$stack->remove('convert');
+$stack->remove('convert'); // remove middleware!
+
+//check again
 
 $client = new Client(['handler' => $stack]);
 $response = $client->get('http://jsonplaceholder.typicode.com/posts/1');
