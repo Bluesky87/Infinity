@@ -19,4 +19,4 @@ $stream->write(' TEST');
 $stream->rewind();
 echo $stream->read(5) . "</br>";
 echo $stream->getContents() . "</br>";
-echo $stream->eof() . "</br>";
+echo $stream->eof() . "</br>"; // if you read all content true/false
